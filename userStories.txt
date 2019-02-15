@@ -1,11 +1,16 @@
-
 As a user I want to enter my zip code so that I can look up happy hours in my area.
 As a user I want to enter my city so that I can look up happy hours in my area.
+As a user I want to add my location so that I could look up bars based on distance (closest first).
+As a user I want to click on the share button to share the bar that came up in my search with my friends via social media.
+
+As a user I want to see a map with the bars in my zip code.
+As a user I want to see a map with bars in my city.
+
 As a user I want a friendly reminder if I run an empty search.
 As a user I want a friendly reminder if I run an invalid search.
-
 As a user I want to add new bars to the list so that other users can learn about other happy hours.
 As a user I want to be notified when an invalid entry is entered into the create bar listing form.
+
 As a user I want to modify information about bar phone number so that the listing is more complete.
 As a user I want to be notified when an invalid entry is entered into the update phone number form.
 As a user I want to modify information about bar happy hour so that the listing is more complete.
@@ -13,9 +18,9 @@ As a user I want to be notified when an invalid entry is entered into the update
 As a user I want to modify information about happy hour comments so that the listing is more complete.
 As a user I want to be notified when an invalid entry is entered into the update comments form.
 As a user I want to view the listing of bar after updating a listing.
+
 As a user I want to let the admin know that I want to delete a listing of a bar.
+
 As an admin I want to log in to my account.
 As an admin user I want to delete a listing so that bars that have closed or don't have happy hours any more would be removed.
 As an admin I want to log out of my account.
-
-
