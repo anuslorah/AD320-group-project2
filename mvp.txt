@@ -14,8 +14,3 @@ As a user I want to modify information about happy hour comments so that the lis
 As a user I want to be notified when an invalid entry is entered into the update comments form.
 As a user I want to view the listing of bar after updating a listing.
 As a user I want to let the admin know that I want to delete a listing of a bar.
-As an admin I want to log in to my account.
-As an admin user I want to delete a listing so that bars that have closed or don't have happy hours any more would be removed.
-As an admin I want to log out of my account.
-
-
