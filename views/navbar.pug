@@ -1,7 +1,32 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='style.css')
-  body
-    p test
+head
+  AD320_Group
+    //-<!--meta data https://www.w3schools.com/tags/tag_meta.asp -->
+    meta(name="viewport" content="width=device-width, initial-scale=1", user-scalable=no)
+    meta(name="robots" content="noindex,nofollow")
+    meta(charset="UTF-8")
+
+    //-<!-- bootstrap fontawesome icons -->
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
+
+    //-links to css files
+    link(rel="stylesheet" href="/stylesheets/navStyle.css")
+    
+
+//-START WRAPPER
+div(class="wrapper")
+
+
+//- START NAV
+nav
+  ul
+    li
+      a(href="index.pug") search
+    li
+      a(href="addlisting.pug") add a listing
+    li
+      a(href="deletelisting.pug") update a listing
+    li
+      a(href="updatelisting.pug") delete a listing
+//-END NAV
