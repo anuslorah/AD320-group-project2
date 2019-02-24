@@ -5,6 +5,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var navbarRouter = require('./routes/navbar');
 
 var app = express();
 
@@ -18,5 +19,6 @@ app.set('view engine', 'pug');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/navbar', navbarRouter);
 
 module.exports = app;
