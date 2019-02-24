@@ -1,0 +1,260 @@
+@font-face {
+	font-family: "The Slug and Lion";
+	src: url(../images/TheSlugandLion.otf);
+}
+
+html {
+	background-color: #1a2930;
+}
+
+body{
+    margin:0;
+    padding:0;
+
+}
+
+.div1 {
+    /* header div*/
+    overflow: hidden;
+	background-color: #c06014;
+    opacity: 0.8;
+    height: 120px;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.div1 h2 {
+    font-family: "The Slug and Lion";
+    font-size: 70px;
+    text-align: center;
+    margin-top: 14px;
+}
+div.wrapper {
+    /*--main div w/nav inside--*/
+    background-color:#eddbcd;
+    width:80%;
+    overflow:auto;
+    height: 460px;
+    margin:0 auto;
+    margin-top: 8px;
+    text-align: center;
+}
+
+
+#formdiv {
+  /*--put div around form--*/
+    margin-top:10%;
+    display: inline-block;
+}
+
+.grid-item {
+/*	border: 1px solid black;*/
+	text-align: left;
+}
+
+.grid-item2 {
+/*	border: 1px solid red;*/
+/*	height: 20px;*/
+	text-align: left;
+}
+
+.grid-item3 {
+	width: 80%;
+}
+
+.grid-container {
+	margin-top: 16px;
+	display: grid;
+	grid-gap: 12px;
+  	grid-template-columns: auto auto;
+	margin-left: 40px;
+	margin-right: 20px;
+}
+
+form{
+/*--css for form--*/    
+    font-size:1.2em;
+}
+
+#editform {
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#login {
+    margin: 10px;
+    text-align: center;
+    font-size:1em;
+}
+#login div {
+    margin: 10px;
+}
+
+
+label {
+/*  width: 80px;*/
+  text-align: right;
+}
+
+input{
+	text-align: left;
+}
+
+.submit {
+    width: 80px;
+    text-align: center;
+}
+
+#updatebutton {
+    width: 80px;
+    text-align: center;
+    float: left;
+    margin-top: 10px;
+}
+
+#edit {
+    margin: 10px;
+    text-align: left;
+}
+
+#edit input {
+    font-size:1em;
+}
+#edit label{
+    width: 60%;
+}
+
+#fb {
+    font-size:1.2em;
+    font-weight: bold;
+}
+button {
+	color: #c06014;
+}
+
+footer {
+    text-align: center;
+    opacity: .8;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer a:link {
+    color: #c06014;
+}
+
+footer a:visited {
+    color: #c06014;	
+}
+
+footer a:hover{
+    color: #eddbcd;
+    font-size:1.1em;
+}
+
+
+.footerfont{
+    color: #eddbcd;
+}
+img:hover {
+    border:0px solid lightblue;  /* -- Increasing the px here causes icons next to it to jump --*/
+    box-shadow: 0 0 10px #eddbcd;
+}
+
+.twitter {
+    max-width:5%;
+    margin-left:5px;
+
+}
+
+img.fb,.twitter a:link{
+    color: #eddbcd;
+}
+
+img.fb,.twitter{
+    border-radius: 50%; /* --- gives round shape -- */
+}
+
+
+/*---start of @media query---*/
+@media all and (max-width:790px) {
+    .div1 {
+        height: 60px;
+        width: 90%;
+    }
+
+    .div1 h2 {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    div.wrapper {
+        width: 100%;
+    }
+    
+    form{
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    #formdiv{
+        margin-top: 10%;
+        width: 70%;
+        display: inline-block;
+    }
+
+    .grid-container {
+        margin-top: 10px;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    footer{
+        width: 100%;
+    }
+    
+    .div1 {
+        width: 100%;
+    }
+}
+/*---End of @media query---*/
+@media all and (max-width:400px) {
+
+    div.wrapper {
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #formdiv{
+        margin-top: 10%;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .grid-container {
+        margin-top: 10px;
+        grid-gap: 10px;
+        grid-template-columns: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    footer{
+        width: 100%;
+    }
+
+    .div1 {
+
+        width: 100%;
+    }
+    h2{
+    }
+}
