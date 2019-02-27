@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var navbarRouter = require('./routes/navbar');
 var updatelistingRouter = require('./routes/updatelisting');
+var deletelistingRouter = require('./routes/deletelisting');
 
 
 var app = express();
@@ -26,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/navbar', navbarRouter);
 app.use('/updatelisting', updatelistingRouter);
+app.use('/deletelisting', deletelistingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -42,5 +44,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+var port = process.env.PORT || 3000;
+app.listen(port);
 
 module.exports = app;
