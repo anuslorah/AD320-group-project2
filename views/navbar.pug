@@ -12,23 +12,23 @@ head
 
     //-links to css files
     link(rel="stylesheet" href="/stylesheets/navStyle.css")
-    
+    link(rel="stylesheet" href="/stylesheets/main.css")
 
 //-START WRAPPER
 div(class="wrapper")
 
-
-//- START NAV
-nav
-  ul
-    li
-      a(href="index.pug") search
-    li
-      a(href="addlisting.pug") add a listing
-    li
-      a(href="deletelisting.pug") update a listing
-    li
-      a(href="updatelisting.pug") delete a listing
+    h2 Best Happy Hour
+    //- START NAV
+    nav
+      ul
+        li
+          a(href="index.pug") search
+        li
+          a(href="addlisting.pug") add a listing
+        li
+          a(href="deletelisting.pug") update a listing
+        li
+          a(href="updatelisting.pug") delete a listing
 //-END NAV
 body
     block content
