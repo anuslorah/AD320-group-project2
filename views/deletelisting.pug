@@ -1,18 +1,25 @@
+
 extends navbar
-
 block content
-    h2 Select a bar to delete:
 
-    form
 
-        label City:
-        br
-        input(type='text' name='city')
-        br
-        label Zip:
-        br
-        input(type='text' name='zip')
-        br
-        label Bar ID:
-        br
-        input(type='text' name='id')
+    div(class='grid-container')
+        div(class='grid-item')
+            h2 Select a bar to delete:
+        div(class='grid-item2')
+        div(class='grid-item')
+            label City:
+        div(class='grid-item2')
+            input(type='text' name='city')
+        div(class='grid-item')
+            label Zip:
+        div(class='grid-item2')
+            input(type='text' name='zip')
+        div(class='grid-item')
+            label Bar ID:
+        div(class='grid-item2')
+            input(type='text' name='id')
+        div(class='grid-item')
+            label
+        div(class='grid-item2')
+            input(type='submit' name='submit' value='search')
