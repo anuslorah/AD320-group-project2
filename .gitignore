@@ -1,2 +1,2 @@
-/node-modules/*
+node-modules/*
 db_creds.json
