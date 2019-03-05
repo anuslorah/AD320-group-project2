@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var navbarRouter = require('./routes/navbar');
 var updatelistingRouter = require('./routes/updatelisting');
 var deletelistingRouter = require('./routes/deletelisting');
+var loginRouter = require('./routes/login');
+var signupRouter = require('./routes/signup');
 
 
 var app = express();
@@ -28,6 +30,8 @@ app.use('/users', usersRouter);
 app.use('/navbar', navbarRouter);
 app.use('/updatelisting', updatelistingRouter);
 app.use('/deletelisting', deletelistingRouter);
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
 
 
 // catch 404 and forward to error handler
