@@ -158,8 +158,8 @@ img:hover {
     box-shadow: 0 0 10px #eddbcd;
 }
 
-.twitter {
-    max-width:5%;
+.twitter, .fb{
+    max-width:10%;
     margin-left:5px;
 
 }
