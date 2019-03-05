@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
+var searchRouter = require('./routes/search');
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var navbarRouter = require('./routes/navbar');
@@ -30,6 +34,8 @@ app.use('/navbar', navbarRouter);
 app.use('/updatelisting', updatelistingRouter);
 app.use('/deletelisting', deletelistingRouter);
 app.use('/addlisting', addlistingRouter);
+app.use('/search', searchRouter);
+
 
 
 // catch 404 and forward to error handler
