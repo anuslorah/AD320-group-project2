@@ -4,3 +4,4 @@ var connection = db.createConnection(dbCred);
 
 
 module.exports = connection;
+

@@ -2,20 +2,24 @@ extends navbar
 block content
 
 
-	div(class='grid-container')
-		div(class='grid-item')
-			h2 Select a bar listing to update:
-		div(class='grid-item2')
-	form(method="POST")
-		div(class='grid-item')
-			label(for='city') City:
-		div(class='grid-item2')
-			input(type='text' name='city' id='city')
-		div(class='grid-item')
-			label(for='zip code') Zip:
-		div(class='grid-item2')
-			input(type='text' name='zip' id='zip')
-		div(class='grid-item')
-			label(for='search')
-		div(class='grid-item2')
-			input(type='submit' name='submit' value='search')
+
+	form(onsubmit='', name='form')
+
+		div(class='grid-container')
+			div(class='grid-item')
+				h2 Select a bar listing to update:
+			div(class='grid-item2')
+			div(class='grid-item')
+				label(for='city') City:
+			div(class='grid-item2')
+				input(type='text' name='city')
+			div(class='grid-item')
+				label(for='zip code') Zip:
+			div(class='grid-item2')
+				input(type='text' name='zip')
+			div(class='grid-item')
+				label(for='search')
+			div(class='grid-item2')
+				input(type='submit' name='submit' value='search')
+
+	include footer.pug
