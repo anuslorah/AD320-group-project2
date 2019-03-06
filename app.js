@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var navbarRouter = require('./routes/navbar');
 var updatelistingRouter = require('./routes/updatelisting');
 var deletelistingRouter = require('./routes/deletelisting');
+var addlistingRouter = require('./routes/addlisting');
 
 
 var app = express();
@@ -28,12 +29,29 @@ app.use('/users', usersRouter);
 app.use('/navbar', navbarRouter);
 app.use('/updatelisting', updatelistingRouter);
 app.use('/deletelisting', deletelistingRouter);
+app.use('/addlisting', addlistingRouter);
 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+//
+// var db = require('mysql');
+// var dbCred = require('./db_creds.json');
+// var connection = db.createConnection(dbCred);
+
+// connection.connect(function(err){
+//   if (err) throw err;
+//   console.log('Connected..');
+//   var sql = "INSERT INTO bar (barName, streetAddress, city, zipcode, phone, happyHour, awesome) VALUES ('myBar', '123 happy street', 'seattle', '65555', '789456123', 'happyHour', 'awesome')";
+//   connection.query(sql, function (err, result) {
+//     if (err) throw err;
+//     console.log("1 record inserted");
+//   });
+// });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -45,7 +63,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3001;
 app.listen(port);
 
 module.exports = app;
