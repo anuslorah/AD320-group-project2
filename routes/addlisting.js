@@ -27,6 +27,7 @@ console.log('after post');
   connection.query(sql, params, function (err, result){
     if (err) throw err;
     console.log("1 record inserted");
+  connection.close
   });
 });
 
