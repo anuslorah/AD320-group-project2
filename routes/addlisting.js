@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var connection = require('../db/connection');
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('addlisting', { title: 'Add a bar' });
@@ -30,6 +31,7 @@ console.log('after post');
   connection.close
   });
 });
+
 
 
 

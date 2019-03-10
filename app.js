@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var navbarRouter = require('./routes/navbar');
@@ -50,6 +51,12 @@ app.use(function(req, res, next) {
 //     console.log("1 record inserted");
 //   });
 // });
+
+
+
+var db = require('mysql');
+var dbCred = require('./db_creds.json');
+var connection = db.createConnection(dbCred);
 
 
 
