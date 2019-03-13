@@ -7,6 +7,7 @@ var bodyParser = require("body-parser");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var navbarRouter = require('./routes/navbar');
+var addlistingRouter = require('./routes/addlisting'); //just added
 var updatelistingRouter = require('./routes/updatelisting');
 var deletelistingRouter = require('./routes/deletelisting');
 var loginRouter = require('./routes/login');
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/navbar', navbarRouter);
+app.use('/addlisting', addlistingRouter);
 app.use('/updatelisting', updatelistingRouter);
 app.use('/deletelisting', deletelistingRouter);
 app.use('/login', loginRouter);
