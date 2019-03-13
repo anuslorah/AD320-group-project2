@@ -25,7 +25,7 @@ router.post('/', function(req, res, next){
   var params = [name,street,city,zip,phone,hh,awesome];
 
   console.log("Connected..")
-  var sql = "INSERT INTO bar (barID, barName, streetAddress, city, zipcode, phone, happyHour, awesome) VALUES(null,?,?,?,?,?,?,?)";
+  var sql = "INSERT INTO bar (barName, streetAddress, city, zipcode, phone, happyHour, awesome) VALUES(?,?,?,?,?,?,?)";
   console.log(sql);
   connection.query(sql, params, function (err, result){
     if (err) throw err;
