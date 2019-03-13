@@ -1,0 +1,8 @@
+extends navbar
+block content
+	div(class='grid-container')
+		div(class='grid-item')
+			-for(var prop in bars)
+			p #{prop}: #{bars[prop]}
+			
+	include footer.pug
