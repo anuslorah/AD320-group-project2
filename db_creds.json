@@ -1,6 +1,8 @@
 {
- "host" : "mysql.websitesinseattle.com",
- "user" : "migace1",
- "password" : "#Vcfttz91",
+ "host" : "localhost",
+ "user" : "root",
+ "password" : "",
  "database" : "besthappy"
 }
+
+
