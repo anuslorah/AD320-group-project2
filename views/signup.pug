@@ -1,32 +1,33 @@
 extends navbar
 block content
 
-    div(class='grid-container')
-        div(class='grid-item')
-            h2 #{title}
-        div(class='grid-item2')
-        div(class='grid-item')
-            label First Name:
-        div(class='grid-item2')
-            input(type='text', placeholder='Jane', name='first')
-        div(class='grid-item')
-            label Last Name:
-        div(class='grid-item2')
-            input(type='text', placeholder='Doe', name='last')
-        div(class='grid-item')
-            label E-mail:
-        div(class='grid-item2')
-            input(type='email', placeholder='example@domain.com', name='email')
-        div(class='grid-item')
-            label Username:
-        div(class='grid-item2')
-            input(type='text', placeholder='jane.doe1', name='uid')
-        div(class='grid-item')
-            label Password:
-        div(class='grid-item2')
-            input(type='password', placeholder='******', name='pwd')
-        div(class='grid-item')
-            label
-        div(class='grid-item2')
-            input(type='submit' name='submit' value='Signup')
+    form(action="/signup" method="post")
+        div(class='grid-container')
+            div(class='grid-item')
+                h2 #{title}
+            div(class='grid-item2')
+            div(class='grid-item')
+                label First Name:
+            div(class='grid-item2')
+                input(type='text', placeholder='Jane', name='first')
+            div(class='grid-item')
+                label Last Name:
+            div(class='grid-item2')
+                input(type='text', placeholder='Doe', name='last')
+            div(class='grid-item')
+                label E-mail:
+            div(class='grid-item2')
+                input(type='email', placeholder='example@domain.com', name='email')
+            div(class='grid-item')
+                label Username:
+            div(class='grid-item2')
+                input(type='text', placeholder='jane.doe1', name='uid')
+            div(class='grid-item')
+                label Password:
+            div(class='grid-item2')
+                input(type='password', placeholder='******', name='pwd')
+            div(class='grid-item')
+                label
+            div(class='grid-item2')
+                input(type='submit' name='submit' value='Signup')
 

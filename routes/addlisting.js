@@ -3,10 +3,12 @@ var router = express.Router();
 var connection = require('../db/connection');
 
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('addlisting', { title: 'Add a bar' });
 });
+
 
 function respond(){
   var response = document.getElementByID('response');
