@@ -1,5 +1,9 @@
 
 
+function respond(){
+  var response = document.getElementByID('response');
+  response.innerHTML = "Thank you for your input. Your bar has been added to the database. Please feel free to add additional awesome bars.";
+}
 
 function val(){
 
@@ -40,17 +44,4 @@ function val(){
     }
 
     return true;
-
-
-connection.connect(function(err){
-  if (err) throw err;
-  console.log('Connected..');
-  var sql = "INSERT INTO bar (barName, streetAddress, city, zipcode, phone, happyHour, awesome) VALUES ('"name"', '"streetAddress"', '"city"', '"zip"', '"phone"', '"happyHour"', '"awesome"')";
-  connection.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("1 record inserted");
-  });
-});
-}
-
 
