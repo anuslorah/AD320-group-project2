@@ -14,6 +14,7 @@ var updatelistingRouter = require('./routes/updatelisting');
 var deletelistingRouter = require('./routes/deletelisting');
 var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
+var addlistingRouter = require('./routes/addlisting');
 
 
 var app = express();
@@ -42,6 +43,7 @@ app.use('/deletelisting', deletelistingRouter);
 app.use('/addlisting', addlistingRouter);
 app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
+app.use('/addlisting', addlistingRouter);
 
 
 // catch 404 and forward to error handler
