@@ -4,8 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require("body-parser");
 var logger = require('morgan');
-var session = require('express-session');
-
+var cookieSession = require('cookie-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -14,15 +13,33 @@ var updatelistingRouter = require('./routes/updatelisting');
 var deletelistingRouter = require('./routes/deletelisting');
 var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
+var addlistingRouter = require('./routes/addlisting');
 
 
 var app = express();
-app.use(session({
-    secret: 'hx7832xd',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 60000 }
+
+app.use(cookieSession({
+    name: 'session',
+    keys: ['user']
 }));
+
+app.use(function (req, res, next) {
+    if (req.session){
+        res.locals = {
+            user: req.session.user
+        };
+    } else {
+        res.locals = {
+            user: null
+        };
+    }
+
+
+    next();
+});
+
+
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // view engine setup
@@ -41,7 +58,15 @@ app.use('/updatelisting', updatelistingRouter);
 app.use('/deletelisting', deletelistingRouter);
 app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
+// app.get('*', function (req, res) {
+//         console.log(req.session);
+//         res.send({ user : req.session});
+// });
 
+// app.use(function logout(req, res) {
+//     res.clearCookie('connect.sid');
+//     return res.sendStatus(200);
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

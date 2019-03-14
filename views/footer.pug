@@ -15,7 +15,7 @@ block footer
                     img.twitter(src='images/twitter.png' alt='twitter')
 
         p
-            if sess = 'yes'
+            if (user != null)
                 a(href='logout') Logout
                 |           ||
                 a(href='signup')  Sign Up
