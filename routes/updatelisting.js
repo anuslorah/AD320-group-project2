@@ -20,11 +20,13 @@ router.post('/', function(req, res, next){
     	if (err) throw err;
 		console.log("data retrieved");
 		//console.log(bars);
-		bars = JSON.stringify(result);
+		bars = result;
 		console.log(bars);
 		connection.close;
 		console.log("Connection closed");
-		res.render('updatelisting', {bars : (bars)});
+		res.render('updatelisting', {bars : bars});
+
+		//res.redirect({bars : (bars)}, 'update');
   	});
 });
 

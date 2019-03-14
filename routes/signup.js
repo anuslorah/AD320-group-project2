@@ -26,7 +26,7 @@ router.post('/', function (req, res, next) {
             console.log('The solution is: ', res);
             res.send({
                 "code":200,
-                "success":user +" created"
+                "success":uid +" created"
             });
         }
     });

@@ -120,6 +120,14 @@ input{
     width: 60%;
 }
 
+ul {
+	list-style-type: none;
+}
+
+.buttonU {
+	margin-bottom: 12px;
+}
+
 #fb {
     font-size:1.2em;
     font-weight: bold;
