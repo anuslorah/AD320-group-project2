@@ -1,7 +1,11 @@
 {
  "host" : "localhost",
  "user" : "root",
+<<<<<<< HEAD
  "password" : "P@ssw0rd1",
+=======
+ "password" : "",
+>>>>>>> f26a972ea58d9572fd71ca93e0438da1e8d0efc3
  "database" : "besthappy"
 }
 
