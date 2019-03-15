@@ -25,7 +25,11 @@ router.post('/', function(req, res, next){
             console.log(bars);
             connection.close;
             console.log("Connection closed");
-            res.render('index', {bars : (bars)});
+            if (bars.length) {
+                res.render('index', {bars: (bars)});
+            } else {
+                res.render('index');
+            }
         });
     } else if (zip){
         var sql = "SELECT * FROM bar WHERE zipcode=?";
@@ -34,19 +38,15 @@ router.post('/', function(req, res, next){
             console.log("data retrieved");
 
             //console.log(bars);
-            bars = result;
-            var zipcode;
-            var barName;
-            // var array = [];
-            // for (var i = 0; i < bars.length; i++){
-            //     zipcode = JSON.stringify(bars.zipcode);
-            //     barName = JSON.stringify(bars.barName);
-            //     // array.push({zip : zipcode, name : barName});
-            // }
+            bars = JSON.stringify(result);
             console.log(bars);
             connection.close;
             console.log("Connection closed");
-            res.render('index', {bars : (bars)});
+            if (bars.length){
+                res.render('index', {bars : (bars)});
+            } else {
+                res.render('index');
+            }
         });
     }
 

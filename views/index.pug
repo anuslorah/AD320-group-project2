@@ -19,8 +19,24 @@ block content
             div(class='grid-item2')
                 input(type='submit' name='submit' value='search')
 
-            if {bars}
+            if (bars)
                 each bar in {bars}
-                    p= "zipcode: " + JSON.stringify(bar)
+                    - var i = 0;
+                    while i < bar.length
 
-    include footer
+
+
+
+                         div(class='div-results')
+
+                            ul
+                                li= "Bar name: " + JSON.stringify(bar[i].barName)
+                                li= "zipcode: " + JSON.stringify(bar[i].streetAddress)
+                                li= "City: " + JSON.stringify(bar[i].city)
+                                li= "Zip Code: " + JSON.stringify(bar[i].zipcode)
+                                li= "Phone: " + JSON.stringify(bar[i].phone)
+                                li= "HappyHour: " + JSON.stringify(bar[i].happyHour)
+                                li= "What's Awesome: " + JSON.stringify(bar[i++].awesome)
+
+
+        include footer
