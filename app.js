@@ -17,6 +17,7 @@ var signupRouter = require('./routes/signup');
 var addlistingRouter = require('./routes/addlisting');
 var deleteRouter = require('./routes/delete');
 
+
 var app = express();
 app.use(session({
     secret: 'hx7832xd',
@@ -44,6 +45,7 @@ app.use('/addlisting', addlistingRouter);
 app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
 app.use('/addlisting', addlistingRouter);
+
 app.use('/delete', deleteRouter);
 
 // catch 404 and forward to error handler
