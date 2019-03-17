@@ -1,4 +1,3 @@
-
 var db = require('mysql');
 var dbCred = require('../db_creds.json');
 var connection = db.createConnection(dbCred);
@@ -11,4 +10,3 @@ connection.connect(function(err){
 
 
 module.exports = connection;
-
