@@ -35,5 +35,7 @@ body
         li
           a(href='deletelisting') delete a listing
     //-END NAV
-
+  if (user)
+    div(class='grid-container')
+      h3.welcome Welcome #{user}
   block content

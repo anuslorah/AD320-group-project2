@@ -9,11 +9,17 @@ block content
     form(action='/addlisting' method='POST' onsubmit='return val()')
       .grid-container
         .grid-item
-          label(for='bar name') Bar name:
+          label
         |     
         .grid-item2
+          h3 #{title}
+        |
+        .grid-item
+          label(for='bar name') Bar name:
+        |
+        .grid-item2
           input(type='text', name='name', tabindex='10', size='30')
-        |     
+        |
         .grid-item
           label(for='street address') Street Address:
         |     

@@ -1,26 +1,29 @@
 extends navbar
 block content
 
-  form(action='/' method='POST' name='formU')
-    div(class='grid-container')
-      div(class='grid-item')
-        h2 Search for a bar:
-      div(class='grid-item2')
-      div(class='grid-item')
-        label(for='city') City:
-      div(class='grid-item2')
-        input(type='text' name='city')
-      div(class='grid-item')
-        label(for='zip code') Zip:
-      div(class='grid-item2')
-        input(type='text' name='zip')
-      div(class='grid-item')
-        label(for='search')
-      div(class='grid-item2')
-        input(type='submit' name='submit' value='search')
+    form(action='/' method='POST' name='formU')
+        div(class='grid-container')
+            div(class='grid-item')
+                h2 Search for a bar:
+            div(class='grid-item2')
+            div(class='grid-item')
+                label(for='city') City:
+            div(class='grid-item2')
+                input(type='text' name='city')
+            div(class='grid-item')
+                label(for='zip code') Zip:
+            div(class='grid-item2')
+                input(type='text' name='zip')
+            div(class='grid-item')
+                label(for='search')
+            div(class='grid-item2')
+                input(type='submit' name='submit' value='search')
 
-      each bar in {bars}
-          p= ": " + bar
+            if (bars)
+                each bar in {bars}
+                    - var i = 0;
+                    while i < bar.length
+                        div(class='div-results')
 
                             ul
                                 li= "Bar name: " + JSON.stringify(bar[i].barName)
@@ -32,4 +35,4 @@ block content
                                 li= "What's Awesome: " + JSON.stringify(bar[i++].awesome)
 
 
-        include footer
+    include footer

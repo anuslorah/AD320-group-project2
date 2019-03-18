@@ -1,17 +1,24 @@
 extends navbar
 block content
 
-    form(action="deletelisting" method="post")
+    if (user === "admin")
+        form(action="deletelisting" method="post")
+            div(class='grid-container')
+                div(class='grid-item')
+                    label
+                div(class='grid-item2')
+                    h3 #{title}
+                div(class='grid-item')
+                    label Bar ID:
+                div(class='grid-item2')
+                    input(type='text' name='id')
+                div(class='grid-item')
+                    label
+                div(class='grid-item2')
+                    input(type='submit' name='submit' value='search')
+    else
         div(class='grid-container')
-            div(class='grid-item')
-                label Bar ID:
-            div(class='grid-item2')
-                input(type='text' name='id')
-            div(class='grid-item')
-                label
-            div(class='grid-item2')
-                input(type='submit' name='submit' value='search')
-
+                h3.welcome Must be logged in as Admin to delete!
     if (bars)
         each bar in {bars}
             - var i = 0;

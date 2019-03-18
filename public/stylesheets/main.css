@@ -41,6 +41,12 @@ div.wrapper {
     display: inline-block;
 }
 
+.welcome {
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
 .opacity-full {
     opacity: 1;
 }

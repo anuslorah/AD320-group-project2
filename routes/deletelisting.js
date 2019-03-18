@@ -8,7 +8,7 @@ var bars;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('deletelisting', { title: 'Delete a bar' });
+    res.render('deletelisting', { title: 'Delete a bar:' });
 });
 
 router.post('/', function (req, res, next) {

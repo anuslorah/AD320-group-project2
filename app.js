@@ -25,19 +25,9 @@ app.use(cookieSession({
     keys: ['user']
 }));
 
-app.use(function (req, res, next) {
-    if (req.session){
-        res.locals = {
-            user: req.session.user
-        };
-    } else {
-        res.locals = {
-            user: null
-        };
-    }
-
-
-    next();
+app.use(function(req, res, next) {
+        res.locals.user = req.session.user;
+        next();
 });
 
 
