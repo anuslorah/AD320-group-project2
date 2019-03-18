@@ -5,7 +5,7 @@ var bars;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Search for a bar' });
+    res.render('index', {title: 'Search for a bar' });
 });
 
 router.post('/', function(req, res, next){
