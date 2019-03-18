@@ -124,8 +124,11 @@ ul {
 	list-style-type: none;
 }
 
-.buttonU {
+.buttonU, buttonU2 {
 	margin-bottom: 12px;
+}
+.updateThis {
+	display: none;
 }
 
 #fb {

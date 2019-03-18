@@ -22,19 +22,5 @@ block content
 			div(class='grid-item2')
 				input(type='submit' name='submit')
 			
-		if bars != undefined
-			ul
-				each bar, value in bars
-					li= "Bar name: " + bar.barName
-					li= "Street address: " + bar.streetAddress
-					li= "City: " + bar.city
-					li= "Zip code: " + bar.zipcode
-					li= "Phone number: " + bar.phone
-					li= "Happy hour: " + bar.happyHour
-					li= "Awesomeness: " + bar.awesome
-					button(class='buttonU' id=bar.barID onclick='update(this.id)') update
-		else
-			p no bars
-
-			
+		
 	include footer.pug

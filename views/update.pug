@@ -1,5 +1,37 @@
 extends navbar
 block content
-	-for(var prop in bars)
-	p #{prop}: #{bars[prop]}
+	script(src='/javascript/update.js')
+
+	div(class='grid-container')
+
+		form(action='/update' method='POST' name='form')
+			ul(class='hideBars')
+				each bar, value in bars
+					li= "Bar name: " + bar.barName
+					li= "Street address: " + bar.streetAddress
+					li= "City: " + bar.city
+					li= "Zip code: " + bar.zipcode
+					li= "Phone number: " + bar.phone
+					li= "Happy hour: " + bar.happyHour
+					li= "Awesomeness: " + bar.awesome
+					button(class='buttonU' id=bar.barID onclick='showForm(this.id)') update
+		form(action='/update' method='POST' name='form')
+			ul(class='updateThis')
+				each bar, value in bars
+					li= "Bar name: " + bar.barName
+					input(type='text' name='id' value=bar.barID readonly)
+					li= "Street address: " + bar.streetAddress
+					li= "City: " + bar.city
+					li= "Zip code: " + bar.zipcode
+					li= "Phone number: " + bar.phone
+					input(type='text' name='phoneNumber' placeholder=bar.phone ) 
+					li= "Happy hour: " + bar.happyHour
+					input(type='text' name='happyHour' placeholder='new happy hour' ) 
+					li= "Awesomeness: " + bar.awesome
+					input(type='text' name='awesome' placeholder='awesomeness' )
+					input(type='submit' name='submit') 
+
+
+
+				
 	include footer.pug
