@@ -1,8 +1,13 @@
 extends navbar
 block content
 
+
     form(action="deletelisting" method="post")
         div(class='grid-container')
+            div(class='grid-item')
+                label
+            div(class='grid-item2')
+                h3 #{title}
             div(class='grid-item')
                 label Bar ID:
             div(class='grid-item2')
@@ -11,6 +16,10 @@ block content
                 label
             div(class='grid-item2')
                 input(type='submit' name='submit' value='search')
+
+    if (empty)
+        div(class='grid-container')
+            div.alert.alert-danger.alert-dismissible.fade.show(role='alert') Error: #{empty}
 
     if (bars)
         each bar in {bars}

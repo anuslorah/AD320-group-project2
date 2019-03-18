@@ -14,13 +14,14 @@ router.get('/', function(req, res, next) {
 router.post('/', function (req, res, next) {
     var id = req.body.id;
 
-
-
-    if (id) {
+    if (id === null || id === "") {
+        console.log("id val");
+        res.render("deletelisting", { title: 'Delete a bar', empty: 'Please enter a Bar ID'});
+    } else {
         var sql = "SELECT * FROM bar WHERE barID=?";
         connection.query(sql, [id], function (err, result){
             if (err) throw err;
-            console.log("lsting data retrieved");
+            console.log("listing data retrieved");
 
             //console.log(bars);
             bars = result;
