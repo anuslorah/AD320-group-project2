@@ -5,7 +5,7 @@ var bars;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('updatelisting', { title: 'Update a bar' });
+  res.render('updatelisting', { title: 'Update a bar:' });
 });
 
 router.post('/', function(req, res, next){
