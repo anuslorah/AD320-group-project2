@@ -15,7 +15,7 @@ block footer
                     img.twitter(src='images/twitter.png' alt='twitter')
 
         p
-            if sess = 'yes'
+            if (user != null)
                 a(href='logout') Logout
                 |           ||
                 a(href='signup')  Sign Up
@@ -23,4 +23,11 @@ block footer
                 a(href='login') Login
                 |           ||
                 a(href='signup')  Sign Up
+
+    // jQuery library
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    // Popper JS
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+    // Latest compiled JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
 

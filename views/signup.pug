@@ -31,3 +31,15 @@ block content
             div(class='grid-item2')
                 input(type='submit' name='submit' value='Signup')
 
+            if (empty)
+                div(class='grid-item')
+                    div.alert.alert-danger.alert-dismissible.fade.show.opacity-full(role='alert') Error: #{empty}
+
+            if (success === 0)
+                div(class='grid-item')
+                    div.alert.alert-danger.alert-dismissible.fade.show.opacity-full(role='alert') Error: User #{user} was not created Successfully.
+            else if (success === 1)
+                div(class='grid-item')
+                    div.alert.alert-success.alert-dismissible.fade.show.opacity-full(role='alert') Success: User #{user} was created Successfully.
+
+    include footer

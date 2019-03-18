@@ -6,16 +6,21 @@ head
     meta(name="robots" content="noindex,nofollow")
     meta(charset="UTF-8")
 
+    // Latest compiled and minified CSS
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
     //-<!-- bootstrap fontawesome icons -->
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+
 
 
     //-links to css files
     link(rel="stylesheet" href="/stylesheets/navStyle.css")
     link(rel="stylesheet" href="/stylesheets/main.css")
 
-//-START WRAPPER
-div(class="wrapper")
+body
+  //block content
+  //-START WRAPPER
+  div(class="wrapper")
 
     h2 Best Happy Hour
     //- START NAV
@@ -29,6 +34,6 @@ div(class="wrapper")
           a(href='updatelisting') update a listing
         li
           a(href='deletelisting') delete a listing
-//-END NAV
-body
-    block content
+    //-END NAV
+
+  block content

@@ -6,7 +6,7 @@ block content
   head
   body
     
-    form(action='/addlisting' method='POST' onsubmit='respond()')
+    form(action='/addlisting' method='POST' onsubmit='return val()')
       .grid-container
         .grid-item
           label(for='bar name') Bar name:
