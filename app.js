@@ -14,6 +14,7 @@ var deletelistingRouter = require('./routes/deletelisting');
 var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
 var addlistingRouter = require('./routes/addlisting');
+var deleteRouter = require('./routes/delete');
 
 
 var app = express();
@@ -69,6 +70,8 @@ app.use('/signup', signupRouter);
 //     res.clearCookie('connect.sid');
 //     return res.sendStatus(200);
 // });
+app.use('/addlisting', addlistingRouter);
+app.use('/delete', deleteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
