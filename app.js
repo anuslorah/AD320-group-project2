@@ -18,6 +18,7 @@ var addlistingRouter = require('./routes/addlisting');
 
 var app = express();
 
+
 app.use(cookieSession({
     name: 'session',
     keys: ['user']
@@ -73,20 +74,6 @@ app.use('/signup', signupRouter);
 app.use(function(req, res, next) {
     next(createError(404));
 });
-//
-// var db = require('mysql');
-// var dbCred = require('./db_creds.json');
-// var connection = db.createConnection(dbCred);
-
-// connection.connect(function(err){
-//   if (err) throw err;
-//   console.log('Connected..');
-//   var sql = "INSERT INTO bar (barName, streetAddress, city, zipcode, phone, happyHour, awesome) VALUES ('myBar', '123 happy street', 'seattle', '65555', '789456123', 'happyHour', 'awesome')";
-//   connection.query(sql, function (err, result) {
-//     if (err) throw err;
-//     console.log("1 record inserted");
-//   });
-// });
 
 
 
