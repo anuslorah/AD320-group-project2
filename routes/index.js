@@ -21,7 +21,7 @@ router.post('/', function(req, res, next){
             console.log("data retrieved");
 
             //console.log(bars);
-            bars = JSON.stringify(result);
+            bars = result;
             console.log(bars);
             connection.close;
             console.log("Connection closed");
@@ -38,7 +38,7 @@ router.post('/', function(req, res, next){
             console.log("data retrieved");
 
             //console.log(bars);
-            bars = JSON.stringify(result);
+            bars = result;
             console.log(bars);
             connection.close;
             console.log("Connection closed");
