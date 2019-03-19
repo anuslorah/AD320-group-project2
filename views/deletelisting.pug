@@ -16,20 +16,21 @@ block content
                     label
                 div(class='grid-item2')
                     input(type='submit' name='submit' value='search')
+                if (bars)
+                    each bar in {bars}
+                        - var i = 0;
+                        while i < bar.length
+                            - var val= bar[i].barID
+                            div(class='div-results')
+                                form(action='delete' method='post')
+                                    label= "Bar name: " + JSON.stringify(bar[i].barName)
+                                    label= "zipcode: " + JSON.stringify(bar[i++].zipcode)
+                                    input(type='hidden' name='barid' value=val)
+                                    input(type='submit' value='delete' class='dbutton')
     else
         div(class='grid-container')
                 h3.welcome Must be logged in as Admin to delete!
-    if (bars)
-        each bar in {bars}
-            - var i = 0;
-            while i < bar.length
-                - var val= bar[i].barID
-                div(class='grid-container')
-                    form(action='delete' method='post')
-                        label= "Bar name: " + JSON.stringify(bar[i].barName)
-                        label= "zipcode: " + JSON.stringify(bar[i++].zipcode)
-                        input(type='hidden' name='barid' value=val)
-                        input(type='submit' value='delete')
+
 
     include footer.pug
 
