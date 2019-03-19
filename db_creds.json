@@ -1,7 +1,6 @@
 {
  "host" : "localhost",
  "user" : "root",
- "password" : "root",
- "database" : "besthappy",
- "port": 8889
+ "password" : "SummerIsComing2019!",
+ "database" : "besthappy"
 }

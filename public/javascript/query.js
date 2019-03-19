@@ -1,8 +1,9 @@
 
 
 function respond(){
-  var response = document.getElementByID('response');
-  response.innerHTML = "Thank you for your input. Your bar has been added to the database. Please feel free to add additional awesome bars.";
+	alert('Bar added to database');
+//  var response = document.getElementByID('response');
+//  response.innerHTML = "Thank you for your input. Your bar has been added to the database. Please feel free to add additional awesome bars.";
 }
 
 function val(){
@@ -45,3 +46,5 @@ function val(){
 
     return true;
 
+	respond();
+}

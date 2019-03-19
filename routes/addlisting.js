@@ -10,10 +10,10 @@ router.get('/', function(req, res, next) {
 });
 
 
-function respond(){
-  var response = document.getElementByID('response');
-  response.innerHTML = "Thank you for your input. Your bar has been added to the database. Please feel free to add additional awesome bars.";
-}
+//function respond(){
+//  var response = document.getElementByID('response');
+//  response.innerHTML = "Thank you for your input. Your bar has been added to the database. Please feel free to add additional awesome bars.";
+//}
 
 router.post('/', function(req, res, next){
   var name = req.body.name;
@@ -34,6 +34,7 @@ router.post('/', function(req, res, next){
     console.log("1 record inserted");
   connection.close;
   console.log("Connection closed");
+	  res.render('addlisting');
   });
 });
 
