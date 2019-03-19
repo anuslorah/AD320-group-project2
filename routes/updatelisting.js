@@ -4,6 +4,7 @@ var connection = require('../db/connection.js');
 const {body, validationresult} = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 var bars;
+var time;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -26,10 +27,8 @@ router.post('/', function(req, res, next){
 		console.log(bars);
 		connection.close;
 		console.log("Connection closed");
-		res.render('update', {bars : bars});
-
-		//res.redirect({bars : (bars)}, 'update');
-  	});
+            res.render('update', {bars : (bars), turn : 0});
+            });
 });
 
 //router.get('/', function(req, res, next) {

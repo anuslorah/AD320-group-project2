@@ -3,33 +3,34 @@ block content
 	script(src='/javascript/update.js')
 
 	div(class='grid-container')
-
-		form(action='/update' method='POST' name='form')
-			ul(class='hideBars')
-				each bar, value in bars
-					li= "Bar name: " + bar.barName
-					li= "Street address: " + bar.streetAddress
-					li= "City: " + bar.city
-					li= "Zip code: " + bar.zipcode
-					li= "Phone number: " + bar.phone
-					li= "Happy hour: " + bar.happyHour
-					li= "Awesomeness: " + bar.awesome
-					button(class='buttonU' id=bar.barID onclick='showForm(this.id)') update
-		form(action='/update' method='POST' name='form')
-			ul(class='updateThis')
-				each bar, value in bars
-					li= "Bar name: " + bar.barName
-					input(type='text' name='id' value=bar.barID readonly)
-					li= "Street address: " + bar.streetAddress
-					li= "City: " + bar.city
-					li= "Zip code: " + bar.zipcode
-					li= "Phone number: " + bar.phone
-					input(type='text' name='phoneNumber' placeholder=bar.phone ) 
-					li= "Happy hour: " + bar.happyHour
-					input(type='text' name='happyHour' placeholder='new happy hour' ) 
-					li= "Awesomeness: " + bar.awesome
-					input(type='text' name='awesome' placeholder='awesomeness' )
-					input(type='submit' name='submit') 
+		if (turn === 0)
+			each bar, value in bars
+				form(action='/update' method='GET' name='form')
+					ul(class='hideBars')
+							li= "Bar name: " + bar.barName
+							li= "Street address: " + bar.streetAddress
+							li= "City: " + bar.city
+							li= "Zip code: " + bar.zipcode
+							li= "Phone number: " + bar.phone
+							li= "Happy hour: " + bar.happyHour
+							li= "Awesomeness: " + bar.awesome
+							input(type='hidden' name='id' value=bar.barID)
+							input(type='submit' value='update')
+		else if (turn === 1)
+				form(action='/update' method='POST' name='form')
+					ul
+						li= "Bar name: " + bars[0].barName
+						input(type='text' name='id' value=bars[0].barID readonly)
+						li= "Street address: " + bars[0].streetAddress
+						li= "City: " + bars[0].city
+						li= "Zip code: " + bars[0].zipcode
+						li= "Phone number: " + bars[0].phone
+						input(type='text' name='phoneNumber' placeholder=bars[0].phone )
+						li= "Happy hour: " + bars[0].happyHour
+						input(type='text' name='happyHour' placeholder='new happy hour' )
+						li= "Awesomeness: " + bars[0].awesome
+						input(type='text' name='awesome' placeholder='awesomeness' )
+						input(type='submit' name='Update')
 
 
 
