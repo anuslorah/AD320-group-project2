@@ -197,84 +197,107 @@ img.fb,.twitter{
         font-size: 30px;
         margin-top: 10px;
     }
+
     div.wrapper {
         width: 100%;
     }
-    
-    form{
+
+    form {
         width: 90%;
         margin: 0 auto;
     }
-    
-    #formdiv{
+
+    #formdiv {
         margin-top: 10%;
         width: 70%;
         display: inline-block;
     }
 
     .grid-container {
-		width: 100%;
+        width: 100%;
         display: grid;
         grid-gap: 10px;
         grid-template-columns: auto;
     }
-	
-	.grid-item {
-		text-align: left;
-	}
-	
-    footer{
-        width: 100%;
-    }
-    
-    .div1 {
-        width: 100%;
-    }
-}
-/*---End of @media query---*/
-@media all and (max-width:400px) {
 
-    div.wrapper {
-        width: 100%;
+    .grid-item {
+        text-align: left;
     }
 
-    form{
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    #formdiv{
-        margin-top: 10%;
-        width: 100%;
-        display: inline-block;
-    }
-
-    .grid-container {
-        grid-gap: 10px;
-        grid-template-columns: auto;
-    }
-	
-	.grid-container h2 {
-		font-size: 18px;
-	}
-
-	footer{
+    footer {
         width: 100%;
     }
 
     .div1 {
-
         width: 100%;
     }
-    h2{
-    }
-
-
-    }
-
 
     .div-results {
-        text-align: center;
+
+        background-color: #00B7FF;
         /*background-color: ;*/
         margin: 0 auto;
+        width: 100%;
+    }
 }
+    /*---End of @media query---*/
+    @media all and (max-width: 400px) {
+
+        div.wrapper {
+            width: 100%;
+        }
+
+        form {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #formdiv {
+            margin-top: 10%;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .grid-container {
+            grid-gap: 10px;
+            grid-template-columns: auto;
+        }
+
+        .grid-container h2 {
+            font-size: 18px;
+        }
+
+        footer {
+            width: 100%;
+        }
+
+        .div1 {
+
+            width: 100%;
+        }
+
+        h2 {
+        }
+
+    }
+
+    /* --- search results ---- */
+    .div-results {
+        border:double;
+        background-color: antiquewhite;
+        /*background-color: ;*/
+        margin: 0 auto 0 25%;
+        width: 100%;
+        padding: 1em;
+        word-spacing: 0.25em;
+
+    }
+
+    li {
+        list-style-type: none;
+        text-align: left;
+    }
+
+    .dbutton{
+        float:right;
+    }
