@@ -10,6 +10,10 @@ html {
 body{
     margin: 0;
     padding: 0;
+    background-color: #1a2930;
+}
+.alert {
+    width: 100%;
 }
 
 div.wrapper {
@@ -17,14 +21,14 @@ div.wrapper {
 	overflow: hidden;
 	background-color: #c06014;
     opacity: 0.8;
-    height: 120px;
+    /*height: 120px;*/
     position: relative;
     width: 80%;
     margin: 0 auto;
 	text-align: center;
 }
 
-div1.wrapper h2 {
+.wrapper h2 {
     font-family: "The Slug and Lion";
     font-size: 70px;
     text-align: center;
@@ -37,6 +41,15 @@ div1.wrapper h2 {
     display: inline-block;
 }
 
+.welcome {
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
+.opacity-full {
+    opacity: 1;
+}
 .grid-item {
 /*	border: 1px solid black;*/
 	text-align: right;
@@ -182,6 +195,11 @@ img.fb,.twitter a:link{
 img.fb,.twitter{
     border-radius: 50%; /* --- gives round shape -- */
 }
+.container2 {
+    background: #eddbcd;
+    width: 80%;
+    margin: 2em auto;
+}
 
 
 /*---start of @media query---*/
@@ -195,75 +213,107 @@ img.fb,.twitter{
         font-size: 30px;
         margin-top: 10px;
     }
+
     div.wrapper {
         width: 100%;
     }
-    
-    form{
+
+    form {
         width: 90%;
         margin: 0 auto;
     }
-    
-    #formdiv{
+
+    #formdiv {
         margin-top: 10%;
         width: 70%;
         display: inline-block;
     }
 
     .grid-container {
-		width: 100%;
+        width: 100%;
         display: grid;
         grid-gap: 10px;
         grid-template-columns: auto;
     }
-	
-	.grid-item {
-		text-align: left;
-	}
-	
-    footer{
+
+    .grid-item {
+        text-align: left;
+    }
+
+    footer {
         width: 100%;
     }
-    
+
     .div1 {
         width: 100%;
     }
-}
-/*---End of @media query---*/
-@media all and (max-width:400px) {
 
-    div.wrapper {
-        width: 100%;
-    }
+    .div-results {
 
-    form{
-        width: 100%;
+        background-color: #00B7FF;
+        /*background-color: ;*/
         margin: 0 auto;
-    }
-
-    #formdiv{
-        margin-top: 10%;
         width: 100%;
-        display: inline-block;
-    }
-
-    .grid-container {
-        grid-gap: 10px;
-        grid-template-columns: auto;
-    }
-	
-	.grid-container h2 {
-		font-size: 18px;
-	}
-
-	footer{
-        width: 100%;
-    }
-
-    .div1 {
-
-        width: 100%;
-    }
-    h2{
     }
 }
+    /*---End of @media query---*/
+    @media all and (max-width: 400px) {
+
+        div.wrapper {
+            width: 100%;
+        }
+
+        form {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        #formdiv {
+            margin-top: 10%;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .grid-container {
+            grid-gap: 10px;
+            grid-template-columns: auto;
+        }
+
+        .grid-container h2 {
+            font-size: 18px;
+        }
+
+        footer {
+            width: 100%;
+        }
+
+        .div1 {
+
+            width: 100%;
+        }
+
+        h2 {
+        }
+
+    }
+
+    /* --- search results ---- */
+    .div-results {
+        border:double;
+        background-color: antiquewhite;
+        /*background-color: ;*/
+        margin: 0 auto 0 25%;
+        width: 100%;
+        padding: 1em;
+        word-spacing: 0.25em;
+
+    }
+
+    li {
+        list-style-type: none;
+        text-align: left;
+    }
+
+    .dbutton{
+        float:right;
+    }

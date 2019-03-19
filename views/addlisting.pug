@@ -1,19 +1,25 @@
 extends navbar
-block content
+block append content
 
   script(src='../javascript/query.js')
   html
   head
   body
     
-    form(action='/addlisting' method='POST' onsubmit='respond()')
+    form(action='/addlisting' method='POST')
       .grid-container
         .grid-item
-          label(for='bar name') Bar name:
+          label
         |     
         .grid-item2
+          h3 #{title}
+        |
+        .grid-item
+          label(for='bar name') Bar name:
+        |
+        .grid-item2
           input(type='text', name='name', tabindex='10', size='30')
-        |     
+        |
         .grid-item
           label(for='street address') Street Address:
         |     
@@ -54,9 +60,6 @@ block content
           label(for='submit')
         |     
         .grid-item2
-          input.submit(type='submit', name='submit', value='create')
-        |     
-        #req
-        p1(id='response') Test text 
-    
-    include footer.pug
+          input.submit(type='submit', name='submit', value='create' onclick='val()')
+        
+

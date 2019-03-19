@@ -1,8 +1,8 @@
 
-As a user I want to enter my zip code so that I can look up happy hours in my area. L Hanbo
-As a user I want to enter my city so that I can look up happy hours in my area. L Hanbo
-As a user I want a friendly reminder if I run an empty search. S Hanbo
-As a user I want a friendly reminder if I run an invalid search. S Hanbo
+As a user I want to enter my zip code so that I can look up happy hours in my area. L Hanbo completed 
+As a user I want to enter my city so that I can look up happy hours in my area. L Hanbo completed
+As a user I want a friendly reminder if I run an empty search. S Hanbo completed
+As a user I want a friendly reminder if I run an invalid search. S Hanbo completed
 
 As a user I want to add new bars to the list so that other users can learn about other happy hours. L DONE Jonathan
 

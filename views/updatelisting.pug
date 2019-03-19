@@ -1,14 +1,16 @@
 extends navbar
-block content
-	script(src='/javascript/update.js')
+
+block append content
+	script(src='../javascript/update.js')
 
 	div(class='grid-container')
 
 		form(action='/updatelisting' method='post' name='formU')
 
 			div(class='grid-item')
-				h2 Select a bar listing to update:
+				label
 			div(class='grid-item2')
+				h2 #{title}
 			div(class='grid-item')
 				label(for='city') City:
 			div(class='grid-item2')
@@ -24,5 +26,4 @@ block content
 			if (success)
 				div.alert.alert-success Success: #{bar} bar updated.
 			
-		
-	include footer.pug
+

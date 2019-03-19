@@ -42,6 +42,7 @@ router.post('/', function(req, res, next){
 
 
     connection.query(sql, function (err, result){
+
     	if (err) throw err;
 		console.log("data retrieved");
 		//console.log(bars);
@@ -52,6 +53,7 @@ router.post('/', function(req, res, next){
 		res.render('updatelisting', {success: true, bar: barName});
 
 		// res.redirect({bars : (bars)}, 'update');
+
   	});
 });
 

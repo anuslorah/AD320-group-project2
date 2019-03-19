@@ -3,9 +3,10 @@ var router = express.Router();
 var connection = ('../db/connection');
 
 
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('deletelisting', { title: 'Delete a bar' });
+    res.render('deletelisting', { title: 'Delete a bar:' });
 });
 
 module.exports = router;
@@ -30,3 +31,4 @@ router.post('/', function (req, res) {
     })
 
 })
+

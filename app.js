@@ -4,8 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require("body-parser");
 var logger = require('morgan');
-var session = require('express-session');
-
+var cookieSession = require('cookie-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -16,15 +15,25 @@ var updateRouter = require('./routes/update');
 var deletelistingRouter = require('./routes/deletelisting');
 var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
+var addlistingRouter = require('./routes/addlisting');
+var deleteRouter = require('./routes/delete');
 
 
 var app = express();
-app.use(session({
-    secret: 'hx7832xd',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { maxAge: 60000 }
+
+
+app.use(cookieSession({
+    name: 'session',
+    keys: ['user']
 }));
+
+app.use(function(req, res, next) {
+        res.locals.user = req.session.user;
+        next();
+});
+
+
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // view engine setup
@@ -46,26 +55,22 @@ app.use('/deletelisting', deletelistingRouter);
 app.use('/addlisting', addlistingRouter);
 app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
+// app.get('*', function (req, res) {
+//         console.log(req.session);
+//         res.send({ user : req.session});
+// });
 
+// app.use(function logout(req, res) {
+//     res.clearCookie('connect.sid');
+//     return res.sendStatus(200);
+// });
+app.use('/addlisting', addlistingRouter);
+app.use('/delete', deleteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));
 });
-//
-// var db = require('mysql');
-// var dbCred = require('./db_creds.json');
-// var connection = db.createConnection(dbCred);
-
-// connection.connect(function(err){
-//   if (err) throw err;
-//   console.log('Connected..');
-//   var sql = "INSERT INTO bar (barName, streetAddress, city, zipcode, phone, happyHour, awesome) VALUES ('myBar', '123 happy street', 'seattle', '65555', '789456123', 'happyHour', 'awesome')";
-//   connection.query(sql, function (err, result) {
-//     if (err) throw err;
-//     console.log("1 record inserted");
-//   });
-// });
 
 
 
