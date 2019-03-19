@@ -1,2 +1,3 @@
 node-modules/*
 db/db_creds.json
+.xml

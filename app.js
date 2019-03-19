@@ -11,9 +11,9 @@ var usersRouter = require('./routes/users');
 var navbarRouter = require('./routes/navbar');
 var updatelistingRouter = require('./routes/updatelisting');
 var deletelistingRouter = require('./routes/deletelisting');
+var addlistingRouter = require('./routes/addlisting');
 var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
-var addlistingRouter = require('./routes/addlisting');
 var deleteRouter = require('./routes/delete');
 
 
