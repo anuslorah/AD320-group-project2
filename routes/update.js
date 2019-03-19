@@ -6,7 +6,7 @@ const { sanitizeBody } = require('express-validator/filter');
 /* GET users listing. */
 
 router.get('/', function(req, res, next) {
-	res.render('updatelisting', {bars : (bars)});
+	res.render('update', {bars : (bars)});
 });
 
 router.post('/', function(req, res, next){
@@ -18,12 +18,12 @@ router.post('/', function(req, res, next){
 	var params2 = [happyHour];
 	var params3 = [awesome];
 	var params4 = [id];
-
-  	console.log("Connected..")
-  	var sql = "UDATE bar SET phone=?, happyHour=?, awesome=? WHERE id=?";
+      //
+  	console.log("Connected..");
+  	var sql = "UPDATE bar SET phone=?, happyHour=?, awesome=? WHERE barID=?";
 	
 	
-  	connection.query(sql, [params1],[params2],[params3][params4], function (err, result){
+  	connection.query(sql, [params1],[params2],[params3],[params4], function (err, result){
     	if (err) throw err;
 		console.log("data retrieved");
 		//console.log(bars);
@@ -31,7 +31,7 @@ router.post('/', function(req, res, next){
 		console.log(bars);
 		connection.close;
 		console.log("Connection closed");
-		//res.render('update', {bars : bars});
+		res.render('updatelisting', {bars : bars});
 
 		//res.redirect({bars : (bars)}, 'update');
   	});
