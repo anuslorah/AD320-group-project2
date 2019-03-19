@@ -133,6 +133,17 @@ input{
     width: 60%;
 }
 
+ul {
+	list-style-type: none;
+}
+
+.buttonU, buttonU2 {
+	margin-bottom: 12px;
+}
+.updateThis {
+	display: none;
+}
+
 #fb {
     font-size:1.2em;
     font-weight: bold;

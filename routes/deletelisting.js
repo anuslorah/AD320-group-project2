@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var connection = require('../db/connection.js');
-var bars;
-
+var connection = ('../db/connection');
 
 
 
@@ -11,36 +9,26 @@ router.get('/', function(req, res, next) {
     res.render('deletelisting', { title: 'Delete a bar:' });
 });
 
-router.post('/', function (req, res, next) {
-    var id = req.body.id;
-
-    if (id === null || id === "") {
-        console.log("id val");
-        res.render("deletelisting", { title: 'Delete a bar', empty: 'Please enter a Bar ID'});
-    } else {
-        var sql = "SELECT * FROM bar WHERE barID=?";
-        connection.query(sql, [id], function (err, result){
-            if (err) throw err;
-            console.log("listing data retrieved");
-
-            //console.log(bars);
-            bars = result;
-            console.log(bars);
-            connection.close;
-            console.log("listing Connection closed");
-            if (bars.length){
-                res.render('deletelisting', {bars : (bars)});
-            } else {
-                res.render('deletelisting');
-            }
-        });
-    }
-
-});
-
-
-
-
-
-
 module.exports = router;
+
+router.post('/', function (req, res) {
+    var city = req.body.city;
+    var zip = req.body.zip;
+    var id = req.body.id;
+    var sql = "";
+    if(city){
+        sql = "SELECT * FROM bar WHERE '" + city + "'";
+    } else if(zip){
+        sql = "SELECT * FROM bar WHERE '" + zip + "'";
+    }  else if(id){
+        sql = "SELECT * FROM bar WHERE '" + id + "'";
+    } else {
+        //empty
+    }
+    connection.query(sql, function (error, results) {
+        console.log(results[0])
+        res.redirect('/');
+    })
+
+})
+
