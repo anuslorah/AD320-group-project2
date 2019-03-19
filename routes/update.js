@@ -26,17 +26,14 @@ router.post('/', function(req, res, next){
   	var phoneNumber = req.body.phoneNumber;
   	var happyHour = req.body.happyHour;
   	var awesome = req.body.awesome;
-	var id = req.body.id;
-	var params1 = [phoneNumber];
-	var params2 = [happyHour];
-	var params3 = [awesome];
-	var params4 = [id];
+	var id = parseInt(req.body.id);
+	// var params = [phoneNumber, happyHour, awesome, id];
       //
   	console.log("Connected..");
-  	var sql = "UPDATE bar SET phone=?, happyHour=?, awesome=? WHERE barID=?";
-	
-	
-  	connection.query(sql, [params1],[params2],[params3],[params4], function (err, result){
+  	var sql = "UPDATE bar SET phone='"+phoneNumber+"', happyHour='"+happyHour+"', awesome='"+awesome+"' WHERE barID="+id;
+
+
+  	connection.query(sql, function (err, result){
     	if (err) throw err;
 		console.log("data retrieved");
 		//console.log(bars);

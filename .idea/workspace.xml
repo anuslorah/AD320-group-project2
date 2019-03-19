@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fd8bd31c-2c16-4137-95b2-c1aa1f87e313" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascript/query.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascript/query.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/javascript/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/javascript/update.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/updatelisting.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/updatelisting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/update.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/update.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/updatelisting.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/updatelisting.pug" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,11 +49,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="addlisting.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/addlisting.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/update.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+            <state relative-caret-position="212">
+              <caret line="32" column="103" selection-start-line="32" selection-start-column="103" selection-end-line="32" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -72,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update.pug" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update.pug" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/update.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="81">
               <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
             </state>
           </provider>
@@ -84,7 +88,7 @@
       <file leaf-file-name="updatelisting.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/updatelisting.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="124">
+            <state relative-caret-position="476">
               <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
             </state>
           </provider>
@@ -123,9 +127,9 @@
         <option value="$PROJECT_DIR$/public/javascript/query.js" />
         <option value="$PROJECT_DIR$/views/updatelisting.pug" />
         <option value="$PROJECT_DIR$/public/javascript/update.js" />
-        <option value="$PROJECT_DIR$/routes/update.js" />
         <option value="$PROJECT_DIR$/routes/updatelisting.js" />
         <option value="$PROJECT_DIR$/views/update.pug" />
+        <option value="$PROJECT_DIR$/routes/update.js" />
       </list>
     </option>
   </component>
@@ -277,7 +281,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68859000" />
+    <option name="totallyTimeSpent" value="71328000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -296,7 +300,7 @@
       <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49932885" visible="true" weight="0.37179488" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="4" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.2590604" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2590604" />
       <window_info anchor="right" id="Database" order="7" weight="0.3295302" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="8" weight="0.24966443" />
@@ -580,13 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/addlisting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -660,6 +657,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascript/update.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/index.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -667,10 +671,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascript/update.js">
+    <entry file="file://$PROJECT_DIR$/routes/addlisting.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="198">
+          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/update.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/updatelisting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -681,24 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/updatelisting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/update.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/update.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="212">
+          <caret line="32" column="103" selection-start-line="32" selection-start-column="103" selection-end-line="32" selection-end-column="103" />
         </state>
       </provider>
     </entry>
