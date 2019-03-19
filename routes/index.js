@@ -48,6 +48,8 @@ router.post('/', function(req, res, next){
                 res.render('index');
             }
         });
+    } else {
+        res.render('index', {empty : "All fields required!"})
     }
 
 
