@@ -31,9 +31,17 @@ router.post('/', function(req, res, next){
       //
   	console.log("Connected..");
   	var sql = "UPDATE bar SET phone='"+phoneNumber+"', happyHour='"+happyHour+"', awesome='"+awesome+"' WHERE barID="+id;
+	var barName;
+    connection.query("SELECT barName FROM bar WHERE barID=?",[id], function (err, result) {
+        if (err) throw err;
+        console.log("data retrieved");
+        barName = JSON.stringify(result[0].barName);
+        console.log("BarName: " + JSON.stringify(result[0].barName));
+        connection.close;
+    } );
 
 
-  	connection.query(sql, function (err, result){
+    connection.query(sql, function (err, result){
     	if (err) throw err;
 		console.log("data retrieved");
 		//console.log(bars);
@@ -41,7 +49,7 @@ router.post('/', function(req, res, next){
 		console.log(bars);
 		connection.close;
 		console.log("Connection closed");
-		res.render('update', {bars : bars});
+		res.render('updatelisting', {success: true, bar: barName});
 
 		// res.redirect({bars : (bars)}, 'update');
   	});

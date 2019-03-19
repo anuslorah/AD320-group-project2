@@ -21,6 +21,8 @@ block content
 				label(for='search')
 			div(class='grid-item2')
 				input(type='submit' name='submit')
+			if (success)
+				div.alert.alert-success Success: #{bar} bar updated.
 			
 		
 	include footer.pug
