@@ -1,5 +1,5 @@
 extends navbar
-block content
+block append content
 
     form(action='/' method='POST' name='formU')
         div(class='grid-container')
@@ -39,4 +39,3 @@ block content
                                 li= "What's Awesome: " + JSON.stringify(bar[i++].awesome)
 
 
-    include footer
