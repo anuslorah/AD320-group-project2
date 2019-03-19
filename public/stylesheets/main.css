@@ -184,6 +184,11 @@ img.fb,.twitter a:link{
 img.fb,.twitter{
     border-radius: 50%; /* --- gives round shape -- */
 }
+.container2 {
+    background: #eddbcd;
+    width: 80%;
+    margin: 2em auto;
+}
 
 
 /*---start of @media query---*/

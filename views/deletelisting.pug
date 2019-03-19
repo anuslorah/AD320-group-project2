@@ -1,5 +1,5 @@
 extends navbar
-block content
+block append content
 
     if (user === "admin")
         form(action="deletelisting" method="post")
@@ -31,6 +31,4 @@ block content
         div(class='grid-container')
                 h3.welcome Must be logged in as Admin to delete!
 
-
-    include footer.pug
 

@@ -1,5 +1,5 @@
 extends navbar
-block content
+block append content
 	script(src='../javascript/update.js')
 
 	form(action='/updatelisting' method='POST' name='formU')
@@ -26,4 +26,3 @@ block content
 				p= ": " + bar
 			
 			
-	include footer.pug
