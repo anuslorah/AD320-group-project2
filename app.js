@@ -13,9 +13,9 @@ var addlistingRouter = require('./routes/addlisting');
 var updatelistingRouter = require('./routes/updatelisting');
 var updateRouter = require('./routes/update');
 var deletelistingRouter = require('./routes/deletelisting');
+var addlistingRouter = require('./routes/addlisting');
 var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
-var addlistingRouter = require('./routes/addlisting');
 var deleteRouter = require('./routes/delete');
 
 
