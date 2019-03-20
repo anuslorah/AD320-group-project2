@@ -23,21 +23,26 @@ router.post('/', function(req, res, next){
   var phone = parseInt(req.body.phone);
   var hh = req.body.hh;
   var awesome = req.body.awesome;
+	
 	if(name === null || name === "" ||street === null || street === "" ||city === null || city === "" ||zip === null || zip === "" ||phone === null || phone === "" ||hh === null || hh === "" ||awesome === null || awesome === ""){
 	res.render('addlisting', {empty: true, title: 'Add a bar:'});	
-	}else{
+	}else if(isNaN(zip)){
+		res.render('addlisting', {number:true, title: 'Add a bar:'});		
+	} else if(isNaN(phone)){
+		res.render('addlisting', {number2:true, title: 'Add a bar:'});		
+	}else {
 		var params = [name,street,city,zip,phone,hh,awesome];
 
-  console.log("Connected..")
-  var sql = "INSERT INTO bar (barName, streetAddress, city, zipcode, phone, happyHour, awesome) VALUES(?,?,?,?,?,?,?)";
-  console.log(sql);
-  connection.query(sql, params, function (err, result){
-    if (err) throw err;
-    console.log("1 record inserted");
-  connection.close;
-  console.log("Connection closed");
-	  res.render('addlisting', {success: true, title: 'Add a bar:'});
-  });
+	 	console.log("Connected.. here")
+	 	var sql = "INSERT INTO bar (barName, streetAddress, city, zipcode, phone, happyHour, awesome) VALUES(?,?,?,?,?,?,?)";
+	 	console.log(sql);
+	 	connection.query(sql, params, function (err, result){
+		if (err) throw err;
+			console.log("1 record inserted");
+			connection.close;
+			console.log("Connection closed");
+			res.render('addlisting', {success: true, title: 'Add a bar:'});
+		});
 	}
 
  });
