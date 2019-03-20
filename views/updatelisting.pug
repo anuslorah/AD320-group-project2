@@ -3,9 +3,9 @@ extends navbar
 block append content
 	script(src='../javascript/update.js')
 
-	div(class='grid-container')
+	form(action='/updatelisting' method='post' name='formU')
 
-		form(action='/updatelisting' method='post' name='formU')
+		div(class='grid-container')
 
 			div(class='grid-item')
 				label
