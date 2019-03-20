@@ -49,7 +49,7 @@ router.post('/', function(req, res, next){
             }
         });
     } else {
-        res.render('index', {empty : "All fields required!"})
+        res.render('index', {empty : "At least one search criteria is required!"})
     }
 
 
