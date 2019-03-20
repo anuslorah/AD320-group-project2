@@ -1,6 +1,5 @@
 extends navbar
-block content
-	script(src='/javascript/update.js')
+block append content
 
 	div(class='grid-container')
 		if (turn === 0)
@@ -35,5 +34,3 @@ block content
 
 
 				
-	include footer.pug
-

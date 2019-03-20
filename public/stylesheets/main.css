@@ -309,6 +309,15 @@ img.fb,.twitter{
 
     }
 
+	 .div-results2 {
+        border:double;
+        background-color: antiquewhite;
+        /*background-color: ;*/
+        width: 100%;
+        padding: 1em;
+        word-spacing: 0.25em;
+
+    }
     li {
         list-style-type: none;
         text-align: left;

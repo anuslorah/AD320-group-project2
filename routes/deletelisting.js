@@ -18,6 +18,7 @@ router.post('/', function (req, res, next) {
         console.log("id val");
         res.render("deletelisting", { title: 'Delete a bar', empty: 'Please enter a Bar ID'});
     } else {
+		console.log('boo');
         var sql = "SELECT * FROM bar WHERE barID=?";
         connection.query(sql, [id], function (err, result){
             if (err) throw err;

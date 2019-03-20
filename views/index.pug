@@ -30,7 +30,7 @@ block append content
                         div(class='div-results')
 
                             ul
-                                li= "Bar name: " + JSON.stringify(bar[i].barName)
+                                li= "Bar " + JSON.stringify(bar[i].barID)+": "+ JSON.stringify(bar[i].barName)
                                 li= "zipcode: " + JSON.stringify(bar[i].streetAddress)
                                 li= "City: " + JSON.stringify(bar[i].city)
                                 li= "Zip Code: " + JSON.stringify(bar[i].zipcode)
