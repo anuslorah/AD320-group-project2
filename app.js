@@ -9,13 +9,12 @@ var cookieSession = require('cookie-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var navbarRouter = require('./routes/navbar');
-var addlistingRouter = require('./routes/addlisting');
 var updatelistingRouter = require('./routes/updatelisting');
 var updateRouter = require('./routes/update');
 var deletelistingRouter = require('./routes/deletelisting');
-var addlistingRouter = require('./routes/addlisting');
 var loginRouter = require('./routes/login');
 var signupRouter = require('./routes/signup');
+var addlistingRouter = require('./routes/addlisting');
 var deleteRouter = require('./routes/delete');
 
 
@@ -50,7 +49,6 @@ app.use('/users', usersRouter);
 app.use('/navbar', navbarRouter);
 app.use('/updatelisting', updatelistingRouter);
 app.use('/update', updateRouter);
-app.use('/addlisting', addlistingRouter);
 app.use('/deletelisting', deletelistingRouter);
 app.use('/addlisting', addlistingRouter);
 app.use('/login', loginRouter);
