@@ -60,6 +60,15 @@ block append content
           label(for='submit')
         |     
         .grid-item2
-          input.submit(type='submit', name='submit', value='create' onclick='val()')
+          input.submit(type='submit', name='submit', value='create')
+        |     
+        #req
+        p1(id='response')
+        if (empty)
+          .grid-item
+            div.alert.alert-danger Error: All Fields Required
+        if (success)
+          .grid-item
+            div.alert.alert-success Bar added to database
         
 

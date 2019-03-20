@@ -46,5 +46,6 @@ function val() {
 
     return true;
 
+	respond();
 
 }
