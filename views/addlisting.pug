@@ -1,12 +1,12 @@
 extends navbar
-block content
+block append content
 
   script(src='../javascript/query.js')
   html
   head
   body
     
-    form(action='/addlisting' method='POST' onsubmit='return val()')
+    form(action='/addlisting' method='POST')
       .grid-container
         .grid-item
           label
@@ -63,6 +63,12 @@ block content
           input.submit(type='submit', name='submit', value='create')
         |     
         #req
-        p1(id='response') Test text 
-    
-    include footer.pug
+        p1(id='response')
+        if (empty)
+          .grid-item
+            div.alert.alert-danger Error: All Fields Required
+        if (success)
+          .grid-item
+            div.alert.alert-success Bar added to database
+        
+
